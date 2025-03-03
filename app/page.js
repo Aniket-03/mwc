@@ -375,7 +375,7 @@ export default function Home() {
       <div>    
           <div className="relative w-full h-[calc(100vh-125px)] ">
             <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
-              <h2 className="text-white text-5xl md:text-6xl font-bold mb-4">
+              <h2 className="text-white text-5xl md:text-8xl font-bold mb-4">
               <div className="inline-block border-b-2 border-[#ff4d00] pb-2">
               <Typewriter text="Explore Properties" delay={150} infinite/>
     </div>
@@ -393,13 +393,13 @@ export default function Home() {
         }}
       >
         <div ref={contentRef} className="inline-block">
-          <span className="text-white font-bold text-xl mx-4">Explore Properties in the Best Locations</span>
+          <span className="text-white font-bold text-2xl mx-4">Explore Properties in the Best Locations</span>
           <span className="text-[#ff4d00] font-bold text-xl mx-4">•</span>
-          <span className="text-white font-bold text-xl mx-4">Find Commercial Real Estate Opportunities</span>
+          <span className="text-white font-bold text-2xl mx-4">Find Commercial Real Estate Opportunities</span>
           <span className="text-[#ff4d00] font-bold text-xl mx-4">•</span>
-          <span className="text-white font-bold text-xl mx-4">Discover Office, Retail, Industrial, and More</span>
+          <span className="text-white font-bold text-2xl mx-4">Discover Office, Retail, Industrial, and More</span>
           <span className="text-[#ff4d00] font-bold text-xl mx-4">•</span>
-          <span className="text-white font-bold text-xl mx-4">Top Markets Available Now</span>
+          <span className="text-white font-bold text-2xl mx-4">Top Markets Available Now</span>
           <span className="text-[#ff4d00] font-bold text-xl mx-4">•</span>
         </div>
       </div>
@@ -422,7 +422,7 @@ export default function Home() {
             {options.map(option => (
               <button
                 key={option}
-                className={`py-3 px-6 cursor-pointer font-medium text-gray-700 text-sm focus:outline-none ${
+                className={`py-3 px-6 cursor-pointer font-medium text-gray-700 text-md focus:outline-none ${
                   selectedOption === option ? 'border-b-2 border-[#ff4d00] text-blue-600' : ''
                 }`}
                 onClick={() => setSelectedOption(option)}
@@ -540,10 +540,10 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
         <div className="relative">
-          <h2 className="text-2xl font-bold text-gray-800">Popular Owner Properties</h2>
+          <h2 className="text-3xl font-bold text-gray-800">Popular Owner Properties</h2>
           <div className="absolute -bottom-2 left-0 w-12 h-1 bg-[#ff4d00]"></div>
         </div>
-        <Link href="/properties" className="text-[#ff4d00] font-medium flex items-center">
+        <Link href="/properties" className="text-[#ff4d00] font-medium text-xl flex items-center">
           See all Properties <ArrowRight size={16} className="ml-1 text-[#ff4d00]" />
         </Link>
       </div>
@@ -570,7 +570,7 @@ export default function Home() {
                     {property.imageCount}
                   </div>
                 </div>
-                <div className="p-4">
+                <div className="p-4 text-xl">
                   <div className="font-medium text-gray-800">{property.type}</div>
                   <div className="flex items-center mt-1">
                     <span className="font-semibold text-gray-900">{property.price}</span>
@@ -579,13 +579,13 @@ export default function Home() {
                   </div>
                   <div className="text-gray-600 text-sm mt-2 truncate">{property.location}</div>
                   <div className="flex justify-between mt-2">
-                  <button className="text-sm bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
+                  <button className="text-sm rounded-md bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
                     Explore
                   </button>
-                  <button className="text-sm bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
+                  <button className="text-sm rounded-md bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
                     Share
                   </button>
-                  <button className="text-sm bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
+                  <button className="text-sm rounded-md bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
                     Enquire
                   </button>
                   </div>
@@ -602,10 +602,10 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
         <div className="relative">
-          <h2 className="text-2xl font-bold text-gray-800">Top Projects</h2>
+          <h2 className="text-3xl font-bold text-gray-800">Top Projects</h2>
           <div className="absolute -bottom-2 left-0 w-12 h-1 bg-[#ff4d00]"></div>
         </div>
-        <Link href="/properties" className="text-[#ff4d00] font-medium flex items-center">
+        <Link href="/properties" className="text-[#ff4d00] font-medium text-xl flex items-center">
           See all Projects <ArrowRight size={16} className="ml-1 text-[#ff4d00]" />
         </Link>
       </div>
@@ -632,7 +632,7 @@ export default function Home() {
                     {property.imageCount}
                   </div>
                 </div>
-                <div className="p-4">
+                <div className="p-4 text-xl">
                   <div className="font-medium text-gray-800">{property.type}</div>
                   <div className="flex items-center mt-1">
                     <span className="font-semibold text-gray-900">{property.price}</span>
@@ -641,13 +641,13 @@ export default function Home() {
                   </div>
                   <div className="text-gray-600 text-sm mt-2 truncate">{property.location}</div>
                   <div className="flex mt-2 justify-between">
-                  <button className="text-sm bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
+                  <button className="text-sm bg-[#003366] rounded-md hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
                     Explore
                   </button>
-                  <button className="text-sm bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
+                  <button className="text-sm bg-[#003366] rounded-md hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
                     Share
                   </button>
-                  <button className="text-sm bg-[#003366] hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
+                  <button className="text-sm bg-[#003366] rounded-md hover:bg-gray-800 text-white font-medium py-2 px-4 transition duration-300 ease-in-out">
                     Enquire
                   </button>
                   </div>
@@ -677,21 +677,21 @@ export default function Home() {
         {/* Right side - About text */}
         <div className="w-full lg:w-3/5 bg-sage-400 p-8 lg:p-16 flex flex-col justify-center items-center text-center">
           <div className="max-w-md">
-            <h1 className="text-4xl lg:text-5xl font-serif text-gray-700 mb-6">
+            <h1 className="text-6xl lg:text-5xl font-serif text-gray-700 mb-6">
               About Us
             </h1>
             
             <div className="w-16 h-1 bg-[#ff4d00] mx-auto mb-10"></div>
             
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-gray-600 text-xl mb-8 leading-relaxed">
             We redefine real estate with a modern, intelligent approach. Whether you're buying, selling, or investing, we offer expert guidance and innovative solutions to help you make the right decisions.
             </p>
             
-            <p className="text-gray-600 mb-12 leading-relaxed">
+            <p className="text-gray-600 text-xl mb-12 leading-relaxed">
             With a deep understanding of the market and a commitment to excellence, we connect you to premium properties that match your lifestyle and investment goals. Trust us to turn your real estate dreams into reality.
             </p>
             
-            <button className="bg-[#003366] hover:bg-gray-800 text-white font-medium py-3 px-8 transition duration-300 ease-in-out">
+            <button className="bg-[#003366] rounded-md hover:bg-gray-800 text-white font-medium py-3 px-8 transition duration-300 ease-in-out">
               Get Details
             </button>
           </div>
@@ -764,9 +764,9 @@ export default function Home() {
             <div className="flex flex-col items-center text-center">
               <IconComponent name={feature.icon} />
               
-              <h3 className="mt-4 mb-2 text-xl font-semibold text-gray-800">{feature.title}</h3>
+              <h3 className="mt-4 mb-2 text-2xl font-semibold text-gray-800">{feature.title}</h3>
               
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-600 text-xl">{feature.description}</p>
               
               <div className={`mt-4 w-0 h-1 bg-[#ff4d00] transition-all duration-300 ${
                 index === activeIndex ? 'w-16' : ''
