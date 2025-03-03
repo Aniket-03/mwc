@@ -19,6 +19,42 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .location-button {
+    @apply border-2 border-white py-2 px-6 inline-block text-white transition-all duration-300 cursor-pointer;
+  }
+  
+  .location-button:hover {
+    @apply bg-white text-gray-900 shadow-lg;
+  }
+  
+  .main-button {
+    @apply font-bold py-3 px-8 rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .main-button-primary {
+    @apply bg-white hover:bg-blue-50 text-blue-900;
+  }
+  
+  .main-button-outline {
+    @apply bg-transparent hover:bg-blue-800 text-white border-2 border-white;
+  }
+}
+
+/* Additional custom animations */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom {
+  transition: transform 0.7s ease-in-out;
+}
+
+.image-zoom:hover {
+  transform: scale(1.05);
+}
+
