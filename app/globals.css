@@ -58,3 +58,6 @@ body {
   transform: scale(1.05);
 }
 
+.MuiTypography-body1{
+  font-size: 1.5rem;
+}

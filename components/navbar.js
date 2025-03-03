@@ -108,23 +108,23 @@ const Navbar = () => {
           </a>
         </div>
         </Container>
-        <Container>
+        <Container className="text-xl">
           {/* navbar stack */}
           <Stack
             direction="row"
             justifyContent="space-between"
             alignItems="center"
-            fontSize="1.5rem"
+            fontSize="2rem"
             sx={{
               padding: "8px 0",
               fontSize: "2rem"
             }}
           >
             {/* logo */}
-            <div className="flex items-center">
+            <div className="flex items-center text-xl">
               <Link href="/">
                 <div className="flex items-center cursor-pointer">
-                  <h1 className="text-white text-2xl font-bold">
+                  <h1 className="text-white text-3xl font-bold">
                     <span className="text-[#ff4d00]">M</span>
                     <span className="text-white">W</span>
                     <span className="text-white mr-2">C</span>
@@ -142,9 +142,11 @@ const Navbar = () => {
 
             {/* menu items start */}
             <Stack
+            className="text-xl"
               direction="row"
               gap={4}
               alignItems="center"
+              fontSize="2rem"
               sx={{
                 "& a:hover": {
                   textDecoration: "underline",
@@ -152,11 +154,11 @@ const Navbar = () => {
                   transition: "ease-in-out 0.2s",
                 },
                 display: {
-                  xs: "none",
-                  sm: "none",
-                  md: "none",
-                  lg: "flex",
-                  xl: "flex",
+                  xs: "none text-xl",
+                  sm: "none text-xl",
+                  md: "none text-xl",
+                  lg: "flex text-xl",
+                  xl: "flex text-xl",
                 },
               }}
             >
@@ -181,7 +183,7 @@ const Navbar = () => {
           <List>
             <ListItem sx={{ width: 300 }}>
               <Stack
-              className="text-xl"
+              className="text-2xl"
                 direction="column"
                 gap={2}
                 sx={{

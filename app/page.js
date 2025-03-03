@@ -415,14 +415,14 @@ export default function Home() {
         }
       `}</style>
               </div>
-              <div className="w-full max-w-3xl">
+              <div className="w-full max-w-4xl">
               <div className="bg-white rounded-md shadow-lg overflow-visible">
           {/* Tab Options */}
           <div className="flex border-b overflow-y-auto">
             {options.map(option => (
               <button
                 key={option}
-                className={`py-3 px-6 cursor-pointer font-medium text-gray-700 text-md focus:outline-none ${
+                className={`py-3 px-6 cursor-pointer font-medium text-gray-700 text-xl focus:outline-none ${
                   selectedOption === option ? 'border-b-2 border-[#ff4d00] text-blue-600' : ''
                 }`}
                 onClick={() => setSelectedOption(option)}
@@ -440,18 +440,18 @@ export default function Home() {
                 className="w-full p-4 cursor-pointer text-left flex items-center justify-between"
                 onClick={() => setShowPropertyTypes(!showPropertyTypes)}
               >
-                <span className="text-gray-700">{propertyType}</span>
+                <span className="text-gray-700 text-xl">{propertyType}</span>
                 <svg className="w-4 h-4 text-[#ff4d00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               
               {showPropertyTypes && (
-                <div className="absolute top-full left-0 w-full bg-white text-gray-600 shadow-lg z-50 border max-h-48 overflow-y-auto">
+                <div className="absolute text-xl top-full left-0 w-full bg-white text-gray-600 shadow-lg z-50 border max-h-48 overflow-y-auto">
                   {propertyTypes.map(type => (
                     <div
                       key={type}
-                      className="p-3 text-left hover:bg-gray-100 cursor-pointer"
+                      className="p-3 text-left text-xl hover:bg-gray-100 cursor-pointer"
                       onClick={() => {
                         setPropertyType(type);
                         setShowPropertyTypes(false);
@@ -465,7 +465,7 @@ export default function Home() {
             </div>
             
             {/* Search Input */}
-            <div className="flex items-center md:flex-1 p-1">
+            <div className="flex text-xl items-center md:flex-1 p-1">
               <svg className="w-5 h-5 text-[#ff4d00] ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -540,7 +540,7 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
         <div className="relative">
-          <h2 className="text-3xl font-bold text-gray-800">Popular Owner Properties</h2>
+          <h2 className="text-4xl font-bold text-gray-800">Popular Owner Properties</h2>
           <div className="absolute -bottom-2 left-0 w-12 h-1 bg-[#ff4d00]"></div>
         </div>
         <Link href="/properties" className="text-[#ff4d00] font-medium text-xl flex items-center">
@@ -553,7 +553,7 @@ export default function Home() {
           {properties.map((property) => (
             <div key={property.id} className="px-2">
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48">
+                <div className="relative h-64">
                   <div className="aspect-w-16 aspect-h-12">
                     <Image 
                       src={property.imageUrl} 
@@ -602,7 +602,7 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
         <div className="relative">
-          <h2 className="text-3xl font-bold text-gray-800">Top Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-800">Top Projects</h2>
           <div className="absolute -bottom-2 left-0 w-12 h-1 bg-[#ff4d00]"></div>
         </div>
         <Link href="/properties" className="text-[#ff4d00] font-medium text-xl flex items-center">
@@ -615,7 +615,7 @@ export default function Home() {
           {properties.map((property) => (
             <div key={property.id} className="px-2">
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48">
+                <div className="relative h-64">
                   <div className="aspect-w-16 aspect-h-12">
                     <Image 
                       src={property.imageUrl} 
@@ -677,7 +677,7 @@ export default function Home() {
         {/* Right side - About text */}
         <div className="w-full lg:w-3/5 bg-sage-400 p-8 lg:p-16 flex flex-col justify-center items-center text-center">
           <div className="max-w-md">
-            <h1 className="text-6xl lg:text-5xl font-serif text-gray-700 mb-6">
+            <h1 className="text-5xl lg:text-7xl font-serif text-gray-700 mb-6">
               About Us
             </h1>
             
@@ -748,7 +748,7 @@ export default function Home() {
     <section>
     <div className="bg-white py-16 px-4  rounded-lg mx-auto ">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose Us</h2>
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Us</h2>
         <div className="w-20 h-1 bg-[#ff4d00] mx-auto"></div>
       </div>
       
@@ -797,8 +797,8 @@ export default function Home() {
     <div className="bg-gradient-to-r overflow-y-hidden from-blue-50 to-indigo-50 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">What Our Clients Say</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Hear from our satisfied clients about their experience finding their perfect home with us.</p>
+          <h2 className="text-4xl font-bold text-gray-800 mb-2">What Our Clients Say</h2>
+          <p className="text-gray-600 text-xl max-w-2xl mx-auto">Hear from our satisfied clients about their experience finding their perfect home with us.</p>
           <div className="w-24 h-1 bg-[#ff4d00] mx-auto mt-4"></div>
         </div>
         
