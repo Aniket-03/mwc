@@ -418,7 +418,7 @@ export default function Home() {
               <div className="w-full max-w-3xl">
               <div className="bg-white rounded-md shadow-lg overflow-visible">
           {/* Tab Options */}
-          <div className="flex border-b">
+          <div className="flex border-b overflow-y-auto">
             {options.map(option => (
               <button
                 key={option}
@@ -661,7 +661,7 @@ export default function Home() {
     </section>
 
     <section>
-      <main className="flex flex-col min-h-screen bg-gray-200 lg:flex-row ">
+      <main className="flex flex-col md:min-h-screen min-h-auto bg-gray-200 lg:flex-row ">
         <div className="w-full lg:w-2/5 relative overflow-hidden group">
           <Image
             src="/images/house-middleclass.jpg" 
@@ -794,7 +794,7 @@ export default function Home() {
     </section>
 
     <section>
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 px-4">
+    <div className="bg-gradient-to-r overflow-y-hidden from-blue-50 to-indigo-50 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">What Our Clients Say</h2>
